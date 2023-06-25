@@ -1,3 +1,4 @@
 {
-    "mongoURI" : "mongodb+srv://amitchaman369:admin@cluster0.elolcai.mongodb.net/?retryWrites=true&w=majority"
+    "mongoURI" : "mongodb+srv://amitchaman369:admin@cluster0.elolcai.mongodb.net/?retryWrites=true&w=majority",
+    "jwtSecret" : "mysecrettoken"
 }
