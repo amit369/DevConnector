@@ -38,11 +38,13 @@ router.post('/', [ check('name' , 'Name is required').not().isEmpty(), check('em
         password
      })
     // Encrypt password 
-
+    const salt = await bcrypt.genSalt(10);
+    user.password = await bcrypt.hash(password,salt);
+    await user.save();
 
     // Return jsonwebtoken 
 
-    res.send('User route');
+    res.send('User registered');
     }
     catch(err) 
     {
