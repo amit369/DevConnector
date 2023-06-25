@@ -50,7 +50,7 @@ router.post('/', [ check('name' , 'Name is required').not().isEmpty(), check('em
          id : user.id
       }
     }
-    jwt.sign(payload, config.get('jwtToken'), { expiresIn : 36000}, (err,token0) => {
+    jwt.sign(payload, config.get('jwtSecret'), { expiresIn : 36000}, (err,token0) => {
      if(err)
      throw err;
      res.json({ token });
